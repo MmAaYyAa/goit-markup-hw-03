@@ -22,16 +22,38 @@ ul{
     padding-left: 0;
 }
 
+img{
+    display: block;
+    max-width: 100% ;
+    height: auto;
+}
+
 .list{
     list-style-type: none;
+   
 }
 
 .link{
     text-decoration: none;
+    
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .container{
-    width: 1158px;
+    width: 100%;
+    max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -42,6 +64,8 @@ ul{
 .header{
     padding-top: 24px;
     padding-bottom: 24px;
+    border-bottom: 1px solid #e7e9fc;
+    
 }
 
 
@@ -49,6 +73,8 @@ ul{
 .header-navigation{
     display: flex;
     align-items: center;
+    
+   
 }
 
 .header-logo {
@@ -59,7 +85,9 @@ ul{
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--logo-color);
-    text-transform: uppercase
+    text-transform: uppercase;
+    margin-right: 76px;
+
     
 }
 
@@ -71,6 +99,8 @@ ul{
 .header-container{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  
 }
     
 
@@ -82,6 +112,10 @@ ul{
     letter-spacing: 0.02em;
     color: #2E2F42;
     text-decoration: none;
+    gap:40px;
+    
+    
+    
 }
 
 .header-menu:hover,
@@ -91,22 +125,27 @@ ul{
 
 .address{
     font-style: normal;
+    display: flex;
+    flex-shrink: 0;
+   
+    
 }
 
 .address-menu {
    display: flex;
+   gap:40px;
    
+ 
 }
 
 .address-link{
-    
+  
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    
-    
 }
+    
 
 .address-link:hover,
 .address-link:focus{
@@ -117,9 +156,17 @@ ul{
 /**------HERO------*/
 
 .hero{
-    background-color: #2E2F42;;
+    background-color: #2E2F42;
+    padding:188px 0px;
 }
 
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 316px;
+    
+}
+    
 .hero-title{
     font-weight: 700;
     font-size: 56px;
@@ -127,10 +174,13 @@ ul{
     letter-spacing: 0.02em;
     color: #FFFFFF;
     text-align: center;
-   
+    max-width: 496px;
+    padding-bottom: 48px;
 }
 
+
 .hero-button{
+    
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -139,6 +189,13 @@ ul{
     color: #FFFFFF;
     background-color: #4D5AE5;
     cursor: pointer;
+    min-width: 169px;
+    height: 56px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 16px 32px;
+    margin: auto;
 }
 
 .hero-button:hover,
@@ -148,12 +205,28 @@ ul{
 
 /*?------About us------*/
 
+.features{
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.features-menu{
+    display:flex;
+    gap: 24px;
+}
+
 .features-subtitle {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2E2F42;
+    margin-bottom: 8px;
+}
+
+.features-item{
+    width: calc(( 100% - ( 24px * 3 ) / 4 ));
+    gap: 24px;
 }
 
 .features-item-text {
@@ -166,6 +239,11 @@ ul{
 
 /*-------What are we doing---------*/
 
+
+.work{
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
 .work-subtitle{
     font-weight: 700;
     font-size: 36px;
@@ -174,23 +252,43 @@ ul{
     text-transform: capitalize;
     text-align: center;
     color: var(--title-color);
+    margin-bottom: 72px;
+}
+.work-menu{
+    display: flex;
+    
+}
+.work-item{
+    width: calc((100% - ( 24px * 2 ) / 3));
+    gap: 24px;
 }
 
 /*?-------Team-------*/
 
 .team{
-    background-color: #F4F4FD
+
+    background-color: #F4F4FD;
+    height: 732px;
+    
 }
 
 .team-menu{
-    background-color: #FFFFFF;
+
+   display: flex;
+    gap: 24px;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-item{
+
     background-color: #FFFFFF;
+    width: calc((100% - 72px ) / 4 );
+    gap: 24px;
+    
 }
 
 .team-subtitle{
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -198,25 +296,41 @@ ul{
     text-transform: capitalize;
     text-align: center;
     color: var(--title-color);
+   padding-top: 120px;
+   padding-bottom: 72px;
+     
 }
 
 .team-member{
+
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2E2F42;
     text-align: center;
+    margin-top: 32px;
 }
 
 .team-member-position{
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 32px;
+   
 }
 
 /*-------Footer-------*/
+
+.footer {
+
+    background-color: #2E2F42;
+    min-height: 312px;
+}
 
 .footer-logo{
     font-family: 'Raleway', sans-serif;
@@ -226,6 +340,11 @@ ul{
     letter-spacing: 0.03em;
     color: var(--logo-color);
     text-transform: uppercase;
+       
+}
+
+.footer-container{
+padding-top: 100px;
 }
 
 .footer-logo span{
@@ -237,13 +356,31 @@ ul{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #F4F4FD;
+    margin-top: 16px;
+    padding-bottom: 100px;
+    width: 264px;
 }
 
-.footer{
-    background-color: #2E2F42;
-}
+
 
 /*---------------PORTFOLIO---------------*/
+
+.button-container {
+    width: calc(100% - (24px * 4) / 5);
+    gap: 24px;
+    margin-left: 427px;
+    margin-right: 427px;
+    padding-bottom: 72px;
+
+}
+
+.button {
+    display: flex;
+    padding-top: 96px;
+    list-style-type: none;
+    margin: 0 271px;
+
+}
 
 .button-item{
     font-family: 'Roboto',sans-serif;
@@ -254,9 +391,9 @@ ul{
     color: #4D5AE5;
     background: #F4F4FD;
     cursor: pointer;
-}
-.button{
-    list-style-type: none;
+    border-radius: 4px;
+    border: 1px solid #E7E9FC;
+    padding: 12px 24px;
 }
 
 .button-item:hover,
@@ -265,13 +402,25 @@ ul{
     background-color: #404BBF;
 }
 
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 48px 24px;
+    
+        
+}
+
 .cards-title{
+    padding-top: 32px; 
+    padding-left: 16px;
+    padding-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--title-color)
-    
+       
 }
 
 .cards-text{
@@ -279,10 +428,15 @@ ul{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--text-color);
+    padding-left: 16px;
+    padding-bottom: 32px;
     
 }
 
 .cards-item{
     text-decoration: none;
+    width: calc(100% - (24px * 2) / 3)
+    
 }
+
 
