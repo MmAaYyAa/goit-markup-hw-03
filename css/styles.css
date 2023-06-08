@@ -114,6 +114,7 @@ img{
     padding-top: 24px;
     padding-bottom: 24px;
     gap:40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     
     
@@ -145,6 +146,8 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
     
 
@@ -159,6 +162,7 @@ img{
 .hero{
     background-color: #2E2F42;
     padding:188px 0px;
+    background-image: url();
 }
 
 .hero-container{
@@ -242,7 +246,7 @@ img{
 
 
 .work{
-    padding-top: 120px;
+   
     padding-bottom: 120px;
 }
 .work-subtitle{
@@ -270,7 +274,6 @@ img{
 .team{
 
     background-color: #F4F4FD;
-    height: 732px;
     padding: 120px 0;
     
     
@@ -281,6 +284,7 @@ img{
    display: flex;
     gap: 24px;
     border-radius: 0px 0px 4px 4px;
+    
 }
 
 .team-item{
